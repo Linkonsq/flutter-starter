@@ -1,6 +1,11 @@
 import 'package:flutter_starter/core/error/exceptions.dart';
 import 'package:flutter_starter/features/auth/data/models/user_model.dart';
 
+/// Abstract interface for authentication remote data source
+///
+/// This interface defines the contract for authentication operations that
+/// involve external data sources like REST APIs, GraphQL endpoints, etc.
+/// It follows the Data Source pattern to abstract the data access logic.
 abstract interface class AuthRemoteDataSource {
   Future<UserModel> loginWithEmailAndPassword({
     required String email,
@@ -21,13 +26,18 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
     required String password,
   }) async {
     try {
-      /// Make API call
+      // TODO: Replace with actual API call
+      // Example: final response = await _apiClient.post('/auth/login', {
+      //   'email': email,
+      //   'password': password,
+      // });
       final response = null;
 
       if (response.user == null) {
         throw const ServerException('User is null!');
       }
 
+      // Convert the response to UserModel
       return UserModel.fromJson(response.user!.toJson());
     } catch (e) {
       throw ServerException(e.toString());
@@ -41,13 +51,19 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
     required String password,
   }) async {
     try {
-      /// Make API call
+      // TODO: Replace with actual API call
+      // Example: final response = await _apiClient.post('/auth/signup', {
+      //   'name': name,
+      //   'email': email,
+      //   'password': password,
+      // });
       final response = null;
 
       if (response.user == null) {
         throw const ServerException('User is null!');
       }
 
+      // Convert the response to UserModel
       return UserModel.fromJson(response.user!.toJson());
     } catch (e) {
       throw ServerException(e.toString());

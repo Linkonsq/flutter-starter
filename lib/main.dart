@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/core/theme/theme.dart';
 import 'package:flutter_starter/features/auth/presentation/pages/login_page.dart';
 
 void main() {
@@ -10,9 +11,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      // Apply the custom dark theme
+      theme: AppTheme.darkThemeMode,
+      home: const LoginPage(),
     );
   }
 }

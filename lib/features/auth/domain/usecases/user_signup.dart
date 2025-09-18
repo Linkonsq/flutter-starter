@@ -4,8 +4,15 @@ import 'package:flutter_starter/features/auth/domain/entities/user.dart';
 import 'package:flutter_starter/features/auth/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
+/// Use case for user signup functionality
+///
+/// This use case encapsulates the business logic for creating a new user
+/// account with email and password. It follows the Clean Architecture principle
+/// by containing only application-specific business rules and being independent
+/// of external concerns like UI or data sources.
 class UserSignup implements UseCase<User, UserSignUpParams> {
   final AuthRepository _authRepository;
+
   const UserSignup(this._authRepository);
 
   @override
