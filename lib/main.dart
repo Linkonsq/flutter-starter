@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/screens/welcome_screen.dart';
+import 'package:flutter_starter/features/auth/presentation/pages/login_page.dart';
 
 void main() {
   runApp(const App());
@@ -12,9 +12,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SafeArea(
-        child: WelcomeScreen(),
-      ),
+      home: LoginPage(),
     );
   }
 }

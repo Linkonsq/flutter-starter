@@ -4,9 +4,9 @@ import 'package:flutter_starter/features/auth/domain/entities/user.dart';
 import 'package:flutter_starter/features/auth/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
-class UserSignUp implements UseCase<User, UserSignUpParams> {
+class UserSignup implements UseCase<User, UserSignUpParams> {
   final AuthRepository _authRepository;
-  const UserSignUp(this._authRepository);
+  const UserSignup(this._authRepository);
 
   @override
   Future<Either<Failure, User>> call(UserSignUpParams params) async {

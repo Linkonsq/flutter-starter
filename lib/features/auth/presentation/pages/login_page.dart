@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class WelcomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Center(
-            child: Text("Welcome to Flutter"),
+            child: Text("Welcome to Login Page"),
           ),
         ],
       ),
